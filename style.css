@@ -1,11 +1,6 @@
 @font-face {
-    font-family: Bungee;
-    src: url(Bungee.ttf);
-  }
-
-@font-face {
-font-family: Bungee-Regular;
-src: url('Bungee-Regular.ttf');
+    font-family: Bungee-Regular;
+    src: url('Bungee-Regular.ttf');
 }
 
 * {
@@ -14,13 +9,10 @@ src: url('Bungee-Regular.ttf');
     box-sizing: border-box;
 }
 
-
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     border:5px solid black;
 }
-
-
 
 #wrapper {
     position: fixed;
@@ -30,28 +22,26 @@ body {
     display: flex;
     
 }
-@media (min-width: 1050px) {
+@media (min-width: 900px) {
     #wrapper {
         padding: 50px;
         align-items: center;
-        
-    }
-    
+    } 
 }
 #advice-wrapper {
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
-    gap: 2rem;
+    margin: 0 auto;
+    text-align: left;   
 }
 #advice {
+    margin-top: 50px;
     max-width:80%;
 }
 
-
 img {
-    max-width: 1000px;
     display: block;
 }
 h1 {
@@ -60,21 +50,25 @@ h1 {
     font-weight: normal;
     line-height: 2.3rem;
     color:#AD4182;
-    min-height: 376px;
+    height: 376px;
     word-wrap: break-word;
 }
-@media (min-width: 1050px) {
+@media (min-width: 900px) {
     h1 {
         font-size: 3.0rem;
         line-height: 3.0rem;
+        height: initial;
         min-height: 168px;
     }
     #advice {
         max-width: 100%;
+        margin-top: 0;
     }
     #advice-wrapper {
         align-items: start;
         justify-content: left;
+        margin:0;
+        gap:2em;
     }
     
 }
@@ -111,13 +105,14 @@ input {
 
 #controls {
     display: flex;
-    justify-content: center;
+    justify-content: end;
     align-items: center;
+    flex-wrap: wrap;
     flex-direction: column;
-    gap: 2rem
+    gap: 1rem
 }
 
-@media (min-width: 1050px) {
+@media (min-width: 900px) {
     input {
         width: 500px;
     }
@@ -125,11 +120,35 @@ input {
         text-align:start;
         flex-direction: row;
         justify-content: left;
-    }
-    
+    }   
 }
 
 input:focus {
     border: 2px dotted #CF4E9B;
     outline: none;
+}
+
+#yoda-button {
+    max-width: 150px;
+}
+#yoda-button:hover {
+    cursor: pointer;
+}
+.yoda-yellow {
+    color: yellow;
+}
+.yoda-search {
+    color: black;
+}
+.yoda-wrapper {
+    background: black!important;
+} 
+.yoda-yellow-bg {
+    background-color: yellow;
+    color:black;
+}
+@media (min-width: 900px) {
+    #yoda-button {
+        max-width: 200px;
+    }
 }
