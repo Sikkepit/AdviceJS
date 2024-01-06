@@ -8,23 +8,45 @@ font-family: Bungee-Regular;
 src: url('Bungee-Regular.ttf');
 }
 
-body {
-    margin:0;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
+
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    border:5px solid black;
+    background-color: green;
+}
+
+
 
 #wrapper {
-    position: absolute;
-    inset:0;
+    position: fixed;
+    height:100dvh;
+    inset: 0;
     background-image: linear-gradient(120deg, #0093E9 0%, #80D0C7 100%);
     display: flex;
-    align-items: center;   
-    height:100vh;
+    align-items: center;
+}
+@media (min-width: 1050px) {
+    #wrapper {
+        padding: 50px;
+    }
+    
+}
+#advice-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+}
+#advice {
+    max-width:80%;
 }
 
-#advice-wrapper {
-    padding: 50px;
-}
 
 img {
     max-width: 1000px;
@@ -32,11 +54,26 @@ img {
 }
 h1 {
     font-family: Bungee-Regular;
-    font-size: 3.5em;
+    font-size: 2.8rem;
     font-weight: normal;
-    line-height: 1em;
+    line-height: 3.5rem;
     color:#AD4182;
-    min-height: 150px;
+    min-height: 576px;
+    word-wrap: break-word;
+}
+@media (min-width: 1050px) {
+    h1 {
+        font-size: 3.5rem;
+        line-height: 3.5rem;
+        min-height: 168px;
+    }
+    #advice {
+        max-width: 100%;
+    }
+    #advice-wrapper {
+        align-items: start;
+    }
+    
 }
 
 button {
@@ -44,12 +81,11 @@ button {
     background-color: #CF4E9B;
     border: none;
     color: white;
-    padding: 15px 32px;
+    padding: 18px 32px;
     text-align: center;
     text-decoration: none;
-    font-size: 16px;
-    margin-block: 15px;
-    margin-right: 15px;
+    font-size: 18px;
+    width: 330px;
     border-radius: 25px;
     cursor: pointer;
 }
@@ -63,11 +99,31 @@ input {
     padding: 15px 32px;
     text-align: center;
     text-decoration: none;
-    font-size: 16px;
+    font-size: 18px;
     border-radius: 25px;
-    margin-right: 15px;
     border: 2px dotted white;
-    color:#0093E9;
+    color:#CF4E9B;
+    width: 330px;
+}
+
+#controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 2rem
+}
+
+@media (min-width: 1050px) {
+    input {
+        width: 500px;
+    }
+    #controls {
+        text-align:start;
+        flex-direction: row;
+        justify-content: left;
+    }
+    
 }
 
 input:focus {

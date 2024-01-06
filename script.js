@@ -4,7 +4,7 @@ const randomAdviceButton = document.getElementById('new-advice')
 
 
 async function giveRandomAdvice() {
-    let randomNumber = Math.floor(Math.random() * 223);
+    let randomNumber = Math.floor(Math.random() * 222 + 1);
     const response = await fetch('https://api.adviceslip.com/advice/' + randomNumber);
     const data = await response.json();
     adviceDiv.innerHTML = data.slip['advice'];
