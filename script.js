@@ -7,7 +7,9 @@ async function giveRandomAdvice() {
     let randomNumber = Math.floor(Math.random() * 222 + 1);
     const response = await fetch('https://api.adviceslip.com/advice/' + randomNumber);
     const data = await response.json();
-    adviceDiv.innerHTML = data.slip['advice'];
+    if(typeof data.slip !== 'undefined') adviceDiv.innerHTML = data.slip['advice'];
+    else adviceDiv.innerHTML = "Don't brush your teeth before drinking coffee.";
+    searchField.value = "";
 }
 
 
@@ -24,7 +26,8 @@ searchField.addEventListener("keypress", (event) => {
 
 async function searchadvice() {
     let query = searchField.value;
-
+    searchField.value = "";
+    
     const response = await fetch(`https://api.adviceslip.com/advice/search/${query}`);
     const data = await response.json();
     const advices = data.slips;

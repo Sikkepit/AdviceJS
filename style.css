@@ -92,7 +92,7 @@ button {
     border-radius: 25px;
     cursor: pointer;
 }
-button:hover {
+button:hover, button:active {
     background-color: #F05AB3;
 }
 
