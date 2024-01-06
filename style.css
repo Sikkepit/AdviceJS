@@ -1,0 +1,76 @@
+@font-face {
+    font-family: Bungee;
+    src: url(Bungee.ttf);
+  }
+
+@font-face {
+font-family: Bungee-Regular;
+src: url('Bungee-Regular.ttf');
+}
+
+body {
+    margin:0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#wrapper {
+    position: absolute;
+    inset:0;
+    background-image: linear-gradient(120deg, #0093E9 0%, #80D0C7 100%);
+    display: flex;
+    align-items: center;   
+    height:100vh;
+}
+
+#advice-wrapper {
+    padding: 50px;
+}
+
+img {
+    max-width: 1000px;
+    display: block;
+}
+h1 {
+    font-family: Bungee-Regular;
+    font-size: 3.5em;
+    font-weight: normal;
+    line-height: 1em;
+    color:#AD4182;
+    min-height: 150px;
+}
+
+button {
+    font-family: Bungee-Regular;
+    background-color: #CF4E9B;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    margin-block: 15px;
+    margin-right: 15px;
+    border-radius: 25px;
+    cursor: pointer;
+}
+button:hover {
+    background-color: #F05AB3;
+}
+
+input {
+    font-family: Bungee-Regular;
+    border: none;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    border-radius: 25px;
+    margin-right: 15px;
+    border: 2px dotted white;
+    color:#0093E9;
+}
+
+input:focus {
+    border: 2px dotted #CF4E9B;
+    outline: none;
+}
